@@ -3,6 +3,8 @@ import { Raleway } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import LayoutProvider from "../providers/LayoutProvider";
+import ToastProvider from "@/components/providers/toaster-provider";
+import { ConfettiProvider } from "@/components/providers/confetti-provider";
 import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
 
@@ -31,6 +33,8 @@ export default function RootLayout({
             process.env.NODE_ENV === "development" && "debug-screens"
           )}
         >
+            <ConfettiProvider></ConfettiProvider>
+           <ToastProvider></ToastProvider>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

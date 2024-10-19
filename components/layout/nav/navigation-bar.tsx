@@ -112,7 +112,7 @@ const NavigationBar = () => {
 
         <NavigationMenuItem>
           <Link
-            href="/"
+            href="/lms"
             className={`${pathname === "/" ? "text-danger-500" : "text-white"}`}
             legacyBehavior
             passHref
